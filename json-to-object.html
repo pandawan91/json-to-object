@@ -1,0 +1,41 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`json-to-object`
+
+
+@demo demo/index.html
+-->
+
+<dom-module id="json-to-object">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'json-to-object',
+
+            properties: {
+                json: {
+                    type: String,
+                    observer: "jsonChanged"
+                },
+                object: {
+                    type: Object,
+                    notify: true
+                }
+            },
+
+            jsonChanged: function() {
+                this.object = JSON.parse(this.json);
+                console.log(this.object);
+            }
+
+        });
+    </script>
+</dom-module>

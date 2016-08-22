@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>json-to-object demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../json-to-object.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+
+    </style>
+</head>
+
+<body>
+
+    <div class="vertical-section-container centered">
+        <h3>Basic json-to-object Demo</h3>
+        <demo-snippet>
+            <template>
+                <json-to-object
+                    object="{{object}}"
+                    json='
+                        {
+                            "test": "asd21312312"
+                        }'
+                    ></json-to-object>
+            </template>
+        </demo-snippet>
+    </div>
+
+</body>
+
+</html>
